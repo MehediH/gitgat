@@ -14,7 +14,10 @@
     "url": "git+https://github.com/MehediH/gitgat.git"
   },
   "keywords": [
-    "]"
+    "gitignore",
+    "ignore",
+    "github",
+    "git"
   ],
   "author": "Mehedi Hassan",
   "license": "GNU", 
