@@ -31,7 +31,6 @@ const getIgnores = async () => {
 
     if(data === undefined){
         let files = await getFreshData().then((data) => {
-            data = data;
             return data
         })
 
