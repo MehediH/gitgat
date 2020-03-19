@@ -1,10 +1,12 @@
 const inquirer = require('inquirer');
 const fetch = require("node-fetch");
+var fs = require('fs');
 
 const getFiles = async () => {
     let grabbedFiles = new Map()
 
     let downloadFiles = await fetch("https://api.github.com/repos/github/gitignore/contents/").then(data => data.json()).then((data) => {
+        console.log(data)
         data.map((file) => {
             if(file.name.indexOf(".gitignore") > -1){
                 grabbedFiles.set(file.name, file.download_url)
@@ -39,7 +41,11 @@ let questions = [
 inquirer.prompt(questions).then(answers => {
     getFiles().then((grabbedFiles) => {
         downloadFile(grabbedFiles.get(answers.gitignore)).then((data) => {
-            console.log(data)
+            fs.writeFile(".gitignore-f", data, (err) => {
+                if(err) throw err;
+
+                console.log(".gitignore created")
+            })
         })
     })
 });
