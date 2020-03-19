@@ -4,7 +4,7 @@
 ### Installation
 
 ```
-npm i gitgat --i
+npm i gitgat --g
 ```
 
 ### Usage
