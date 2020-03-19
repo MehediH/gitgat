@@ -1,6 +1,6 @@
 {
   "name": "gitgat",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A simple NPM script for quickly generating gitignore files",
   "main": "index.js",
   "bin": {
