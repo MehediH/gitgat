@@ -1,7 +1,13 @@
-// ./cli.js
-
 #!/usr/bin/env node
 
-let command = require('./index')
+const [,, ...args] = process.argv
 
-command()
+let gitgat;
+
+try {
+    gitgat = require(`${process.cwd()}/node_modules/gitgat/index.js`);
+} catch (e) {
+    gitgat = require('./index');
+}
+
+gitgat(args)

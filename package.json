@@ -1,10 +1,10 @@
 {
   "name": "gitgat",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A simple NPM script for quickly generating gitignore files",
   "main": "index.js",
   "bin": {
-    "do-the-thing": "cli.js"
+    "gitgat": "./cli.js"
   },
   "scripts": {
     "start": "node index.js"
