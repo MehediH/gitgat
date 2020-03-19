@@ -4,7 +4,7 @@
   "description": "A simple NPM script for quickly generating gitignore files",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -14,9 +14,13 @@
     "]"
   ],
   "author": "Mehedi Hassan",
-  "license": "ISC",
+  "license": "GNU",
   "bugs": {
     "url": "https://github.com/MehediH/get-ignore/issues"
   },
-  "homepage": "https://github.com/MehediH/get-ignore#readme"
+  "homepage": "https://github.com/MehediH/get-ignore#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0",
+    "node-fetch": "^2.6.0"
+  }
 }
