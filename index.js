@@ -85,7 +85,7 @@ const main = async () => {
     })
 
     Promise.all(downloadRequestedFiles).then(() => {
-        let path = `${process.cwd()}/.gitignore-f`;
+        let path = `${process.cwd()}/.gitignore`;
 
         fs.writeFile(path, gitIgnoreContent, function(err) {
             if(err) {
