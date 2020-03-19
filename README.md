@@ -7,6 +7,10 @@
 npm i gitgat --g
 ```
 
+### Demo
+
+![demo of gitgagt](https://raw.githubusercontent.com/MehediH/gitgat/media/demo.gif)
+
 ### Usage
 
 * Simple run `gitgat` on the command line
