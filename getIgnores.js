@@ -29,7 +29,16 @@ const getIgnores = async () => {
 
     let data = await storage.getItem('gitIgnores');
 
-    return (data === undefined ? await storage.setItem("gitIgnores", await getFreshData().then((data) => {return data})) : data)
+    if(data === undefined){
+        let files = await getFreshData().then((data) => {
+            data = data;
+            return data
+        })
+
+        await storage.setItem("gitIgnores", files)
+    }
+
+    return await storage.getItem('gitIgnores')
 }
 
 module.exports = getIgnores;
