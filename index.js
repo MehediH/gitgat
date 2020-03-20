@@ -63,7 +63,6 @@ const gitgat = async (args) => {
             let out;
 
             await inquirer.prompt(questions).then(answers => {
-                console.log(answers.custom)
                 requested.push(answers.gitignore)
                 out = answers.more
             });
